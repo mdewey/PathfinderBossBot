@@ -1,10 +1,17 @@
 package com.metagametheory;
 
+import java.util.UUID;
+
 public class Bot {
+    private UUID id = UUID.randomUUID();
     private String name;
 
     public String getName() {
         return name;
+    }
+
+    public UUID getId() {
+        return id;
     }
 
     public Bot(String name){
@@ -14,7 +21,8 @@ public class Bot {
     @Override
     public String toString() {
         return "Bot{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 '}';
     }
 }
